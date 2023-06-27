@@ -1,0 +1,336 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;600;700;800;900&display=swap");
+
+:root {
+  --c-text: #1d1f22;
+  --c-primary: #5ece7b;
+  --c-gray: #8d8f9a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.container {
+  max-width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.app_container {
+  position: relative;
+}
+
+.overlay {
+  background-color: #39374838;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  height: calc(100vh - 77px);
+}
+
+.page_title {
+  font-weight: 400;
+  margin-bottom: 2rem;
+  font-size: 2.625rem;
+}
+
+.product-list {
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.product_details_page {
+  padding-top: 40px;
+}
+
+.gallary {
+  flex: 1;
+}
+
+.gallary ul {
+  list-style: none;
+  margin-right: 40px;
+}
+
+.gallary ul li {
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+}
+
+.gallary ul li:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.gallary ul li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.gallary .main_image {
+  height: 550px;
+}
+
+.gallary .main_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.product_details_info {
+  margin-left: 40px;
+  max-width: 350px;
+}
+
+.product_details_info .brand p,
+.product_details_info .title p {
+  font-size: 1.875rem;
+  margin-bottom: 16px;
+}
+
+.product_details_info .brand p {
+  font-weight: 600;
+}
+
+.product_details_info .title p {
+  font-weight: 400;
+  margin-bottom: 43px;
+}
+
+.product_details_info .title p span {
+  font-weight: 400;
+  font-size: 0.875rem;
+  color: red;
+  margin-left: 8px;
+  text-transform: uppercase;
+}
+
+.product_details_info .sizes {
+  margin-bottom: 24px;
+}
+
+.product_details_info .sizes p {
+  font-weight: 700;
+  font-size: 1.125rem;
+  margin-bottom: 8px;
+}
+
+.product_details_info .sizes ul {
+  list-style: none;
+  gap: 16px;
+}
+
+.product_details_info .sizes ul li {
+  width: 63px;
+  height: 45px;
+  border: 1px solid var(--c-text);
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.product_details_info .sizes ul li.active {
+  background-color: var(--c-text);
+  color: #fff;
+}
+
+.product_details_info .colors p {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.product_details_info .colors ul {
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.product_details_info .colors ul .product_color {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.product_details_info .colors ul .product_color.active {
+  border: 1px solid white;
+  outline: 1px solid var(--c-primary);
+}
+
+.product_details_info .price p {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.product_details_info .price .d-flex {
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.product_details_info .price .d-flex span {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.product_details_info .add_to_cart {
+  margin-bottom: 40px;
+}
+
+.product_details_info .add_to_cart button {
+  width: 100%;
+  background-color: var(--c-primary);
+  color: #fff;
+  text-transform: uppercase;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 32px;
+  border: none;
+  cursor: pointer;
+}
+
+.product_details_info .add_to_cart button.disabled {
+  background-color: #99d3a8;
+  cursor: not-allowed;
+}
+
+.product_details_info .description {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.cart_page .page_title {
+  margin-bottom: 55px;
+}
+
+.cart_page ul {
+  list-style: none;
+}
+.cart_page .cart_items_container {
+  flex-direction: column;
+}
+.cart_page .cart_items_container .empty_state {
+  margin: 3rem 0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.cart_page .cart_items_container li {
+  padding: 24px 0;
+  width: 100%;
+}
+.cart_page .cart_items_container > li {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.cart_page .cart_items_container li .cart_item .brand,
+.cart_page .cart_items_container li .cart_item .title {
+  font-size: 1.875rem;
+}
+
+.cart_page .cart_items_container li .cart_item .brand {
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.cart_page .cart_items_container li .cart_item .title {
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.cart_page .cart_items_container li .cart_item .price span {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+.cart_page .cart_items_container li .cart_item .sizes {
+  margin-bottom: 16px;
+}
+.cart_page .cart_items_container li .cart_item .sizes p,
+.cart_page .cart_items_container li .cart_item .colors p {
+  font-weight: 700;
+  font-size: 1.125rem;
+  margin-bottom: 8px;
+}
+.cart_page .cart_items_container li .cart_item .sizes ul li {
+  width: 65px;
+  height: 45px;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.cart_page .cart_items_container li .cart_item .colors ul li {
+  width: 45px;
+  height: 45px;
+}
+.cart_page .cart_items_container li .cart_item .qty_changer {
+  margin-right: 24px;
+}
+.cart_page .cart_items_container li .cart_item .qty_changer .increment,
+.cart_page .cart_items_container li .cart_item .qty_changer .decrement {
+  width: 45px;
+  height: 45px;
+  font-size: 2rem;
+}
+
+.cart_page .cart_items_container li .cart_item .qty_changer .qty {
+  font-size: 1.5rem;
+}
+
+.cart_page .cart_items_container li .cart_item .image {
+  width: 240px;
+  height: 327px;
+}
+.cart_page .calculations {
+  margin: 16px 0;
+}
+.cart_page .calculations tr {
+  margin-top: 8px;
+}
+.cart_page .calculations .title {
+  width: 100px;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+.cart_page .calculations .title.total {
+  font-weight: 500;
+}
+
+.cart_page .calculations .value {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.cart_page .cta {
+  margin: 24px 0 56px 0;
+}
+.cart_page .cta .order_button {
+  display: inline-block;
+  background-color: var(--c-primary);
+  color: white;
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 1rem 2rem;
+  min-width: 280px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+}
